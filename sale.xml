@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="sale_configuration_view_form">
+            <field name="model">sale.configuration</field>
+            <field name="name">configuration_form</field>
+            <field name="inherit" ref="sale.sale_configuration_view_form"/>
+        </record>
+
+        <record model="res.group" id="group_sale_commission_admin">
+            <field name="name">Sale Commission Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_sale_commission_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_sale_commission_admin">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+        </record>
+        <record model="ir.ui.view" id="commission_type_view_form">
+            <field name="model">commission.type</field>
+            <field name="type">form</field>
+            <field name="name">commission_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="commission_type_view_list">
+            <field name="model">commission.type</field>
+            <field name="type">tree</field>
+            <field name="name">commission_type_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_commission_type">
+            <field name="name">Commission Type</field>
+            <field name="res_model">commission.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commission_type_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="commission_type_view_list"/>
+            <field name="act_window" ref="act_commission_type"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commission_type_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="commission_type_view_form"/>
+            <field name="act_window" ref="act_commission_type"/>
+        </record>
+        <record model="ir.model.access" id="access_commission_type">
+            <field name="model" search="[('model', '=', 'commission.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_commission_type_admin">
+            <field name="model" search="[('model', '=', 'commission.type')]"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="commission_type_category_view_form">
+            <field name="model">commission.type.category</field>
+            <field name="type">form</field>
+            <field name="name">commission_type_category_form</field>
+        </record>
+        <record model="ir.ui.view" id="commission_type_category_view_list">
+            <field name="model">commission.type.category</field>
+            <field name="type">tree</field>
+            <field name="name">commission_type_category_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_commission_type_category">
+            <field name="name">Commission Category</field>
+            <field name="res_model">commission.type.category</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commission_type_category_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="commission_type_category_view_list"/>
+            <field name="act_window" ref="act_commission_type_category"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commission_type_category_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="commission_type_category_view_form"/>
+            <field name="act_window" ref="act_commission_type_category"/>
+        </record>
+        <record model="ir.model.access" id="access_commission_type_category">
+            <field name="model" search="[('model', '=', 'commission.type.category')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_commission_type_category_admin">
+            <field name="model" search="[('model', '=', 'commission.type.category')]"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="commission_type_line_view_form">
+            <field name="model">commission.type.line</field>
+            <field name="type">form</field>
+            <field name="name">commission_type_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="commission_type_line_view_list">
+            <field name="model">commission.type.line</field>
+            <field name="type">tree</field>
+            <field name="name">commission_type_line_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_commission_type_line">
+            <field name="name">CommissionType</field>
+            <field name="res_model">commission.type.line</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commission_type_line_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="commission_type_line_view_list"/>
+            <field name="act_window" ref="act_commission_type_line"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commission_type_line_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="commission_type_line_view_form"/>
+            <field name="act_window" ref="act_commission_type_line"/>
+        </record>
+        <record model="ir.model.access" id="access_commission_type_line">
+            <field name="model" search="[('model', '=', 'commission.type.line')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_commission_type_line_admin">
+            <field name="model" search="[('model', '=', 'commission.type.line')]"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="party_party_view_form">
+            <field name="model">party.party</field>
+            <field name="type">form</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="name">party_party_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_sale_view_form">
+            <field name="model">sale.sale</field>
+            <field name="type">form</field>
+            <field name="inherit" ref="sale.sale_view_form"/>
+            <field name="name">sale_sale_form</field>
+        </record>
+        <!-- Menus -->
+        <record model="ir.ui.menu-res.group"
+            id="menu_configuration_group_sale_commission_admin">
+            <field name="menu" ref="sale.menu_configuration"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+        </record>
+        <menuitem action="act_commission_type_category"
+            id="menu_commission_type_category"
+            parent="sale.menu_configuration" sequence="50"/>
+
+        <record model="ir.ui.menu-res.group"
+            id="menu_sale_commission_type_category_group_sale_commission">
+            <field name="menu" ref="menu_commission_type_category"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+          </record>
+      <menuitem action="act_commission_type" id="menu_commission_type"
+          parent="sale.menu_configuration" sequence="60"/>
+
+      <record model="ir.ui.menu-res.group"
+          id="menu_sale_commission_type_group_sale_commission">
+            <field name="menu" ref="menu_commission_type"/>
+            <field name="group" ref="group_sale_commission_admin"/>
+          </record>
+    </data>
+</tryton>

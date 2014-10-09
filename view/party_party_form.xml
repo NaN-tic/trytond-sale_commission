@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/group[@id='checkboxes']" position="inside">
+        <label name="is_middleman"/>
+        <field name="is_middleman"/>
+    </xpath>
+    <xpath expr="/form/notebook" position="inside">
+        <page id="commissions" string="Commissions">
+            <label name="middleman"/>
+            <field name="middleman"/>
+            <field name="commissions" colspan="3"/>
+        </page>
+    </xpath>
+</data>

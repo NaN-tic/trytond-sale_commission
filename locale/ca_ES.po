@@ -1,0 +1,249 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:commission.type.line:"
+msgid ""
+"Commission \"%(commission)s\" for payment of invoice %(invoice)s with date "
+"%(date)s."
+msgstr ""
+"Comissió \"%(commission)s\" pel pagament de la factura %(invoice)s amb data "
+"%(date)s."
+
+msgctxt "error:commission.type.line:"
+msgid "Product \"%s\" used to generate commissions misses an expense account."
+msgstr ""
+"Falta la compta de despeses pel producte \"%s\" utilitzat per a generar "
+"comissions."
+
+msgctxt "error:commission.type.line:"
+msgid ""
+"There is no product defined for commissions. Please define on in sale "
+"configuration."
+msgstr ""
+"No s'ha definit cap producte per les comissions. Si us plau, definiu-n'hi un"
+" a la configuració de vendes."
+
+msgctxt "field:commission.type,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:commission.type,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:commission.type,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:commission.type,lines:"
+msgid "Commission Lines"
+msgstr "Línies de comisió"
+
+msgctxt "field:commission.type,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:commission.type,parties:"
+msgid "Parties"
+msgstr "Tercers"
+
+msgctxt "field:commission.type,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:commission.type,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:commission.type,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:commission.type-party.party,commission_type:"
+msgid "PartyParty"
+msgstr "Tercers"
+
+msgctxt "field:commission.type-party.party,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:commission.type-party.party,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:commission.type-party.party,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:commission.type-party.party,party:"
+msgid "CommissionType"
+msgstr "Tipus de comissió"
+
+msgctxt "field:commission.type-party.party,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:commission.type-party.party,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:commission.type-party.party,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:commission.type.category,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:commission.type.category,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:commission.type.category,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:commission.type.category,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:commission.type.category,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:commission.type.category,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:commission.type.category,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:commission.type.line,category:"
+msgid "Category"
+msgstr "Categoria"
+
+msgctxt "field:commission.type.line,commission_type:"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "field:commission.type.line,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:commission.type.line,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:commission.type.line,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:commission.type.line,percent:"
+msgid "Percent"
+msgstr "Percentatge"
+
+msgctxt "field:commission.type.line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:commission.type.line,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:commission.type.line,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:party.party,commissions:"
+msgid "Commissions"
+msgstr "Comissions"
+
+msgctxt "field:party.party,is_middleman:"
+msgid "Middleman"
+msgstr "Intermediari"
+
+msgctxt "field:party.party,middleman:"
+msgid "Middleman"
+msgstr "Intermediari"
+
+msgctxt "field:sale.configuration,commission_product:"
+msgid "Commission Product"
+msgstr "Producte comissions"
+
+msgctxt "field:sale.sale,commission_type:"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "field:sale.sale,middleman:"
+msgid "Middleman"
+msgstr "Intermediari"
+
+msgctxt "help:party.party,is_middleman:"
+msgid "Indicates if the party is a middleman and gets commissions."
+msgstr "Indica si el tercer es un intermediari i pot rebre comissions."
+
+msgctxt "help:sale.configuration,commission_product:"
+msgid "Product used to generate in invoices for sale commisions."
+msgstr "Producte per generar les factures de comissions de vendes."
+
+msgctxt "model:commission.type,name:"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "model:commission.type-party.party,name:"
+msgid "CommissionType - Party"
+msgstr "Tipus de comissió - Tercer"
+
+msgctxt "model:commission.type.category,name:"
+msgid "Commission Category"
+msgstr "Categoria de comissions"
+
+msgctxt "model:commission.type.line,name:"
+msgid "CommissionType"
+msgstr "Tipus de comissió"
+
+msgctxt "model:ir.action,name:act_commission_type"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "model:ir.action,name:act_commission_type_category"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "model:ir.action,name:act_commission_type_line"
+msgid "CommissionType"
+msgstr "Tipus de comissió"
+
+msgctxt "model:ir.ui.menu,name:menu_commission_type"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "model:ir.ui.menu,name:menu_commission_type_category"
+msgid "Commission Category"
+msgstr "Categoria de comissions"
+
+msgctxt "model:res.group,name:group_sale_commission_admin"
+msgid "Sale Commission Administration"
+msgstr "Administració de comisions de venda"
+
+msgctxt "view:commission.type.category:"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "view:commission.type.category:"
+msgid "Commission Types"
+msgstr "Tipus de comissió"
+
+msgctxt "view:commission.type.line:"
+msgid "CommissionType"
+msgstr "Tipus de comissió"
+
+msgctxt "view:commission.type:"
+msgid "Commission Type"
+msgstr "Tipus de comissió"
+
+msgctxt "view:party.party:"
+msgid "Commissions"
+msgstr "Comissions"
