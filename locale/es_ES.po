@@ -210,12 +210,34 @@ msgid "Commission Type"
 msgstr "Tipo de comisión"
 
 msgctxt "model:ir.action,name:act_commission_type_category"
-msgid "Commission Type"
+msgid "Commission Category"
 msgstr "Tipo de comisión"
 
 msgctxt "model:ir.action,name:act_commission_type_line"
 msgid "CommissionType"
 msgstr "Tipo de comisión"
+
+msgctxt "model:ir.action,name:act_merited_commission"
+msgid "Commissions"
+msgstr "Comisiones"
+
+msgctxt "model:ir.action,name:act_party_commission"
+msgid "Merited Commissions"
+msgstr "Comisiones meritadas"
+
+msgctxt "model:ir.action.act_window.domain,name:act_merited_commission_all"
+msgid "All"
+msgstr "Todos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_merited_commission_invoiced"
+msgid "Invoiced"
+msgstr "Facturado"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_merited_commission_to_invoice"
+msgid "To Invoice"
+msgstr "A facturar"
 
 msgctxt "model:ir.ui.menu,name:menu_commission_type"
 msgid "Commission Type"
@@ -224,6 +246,10 @@ msgstr "Tipo de comisión"
 msgctxt "model:ir.ui.menu,name:menu_commission_type_category"
 msgid "Commission Category"
 msgstr "Categoría de comisión"
+
+msgctxt "model:ir.ui.menu,name:menu_merited_commission"
+msgid "Commissions"
+msgstr "Comisiones"
 
 msgctxt "model:res.group,name:group_sale_commission_admin"
 msgid "Sale Commission Administration"

@@ -148,7 +148,66 @@
             <field name="inherit" ref="sale.sale_view_form"/>
             <field name="name">sale_sale_form</field>
         </record>
+
+        <record model="ir.action.act_window" id="act_merited_commission">
+            <field name="name">Commissions</field>
+            <field name="res_model">account.invoice.line</field>
+            <field name="domain">[('invoice_type', '=', 'in_invoice'), ('origin', 'like', 'account.move.line%'), ('party.is_middleman', '=', True)]</field>
+            <field name="context">{'invoice_type': 'in_invoice', 'standalone': True}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_merited_commission_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="account_invoice.invoice_line_view_tree"/>
+            <field name="act_window" ref="act_merited_commission"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_merited_commission_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="account_invoice.invoice_line_view_form"/>
+            <field name="act_window" ref="act_merited_commission"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_merited_commission_to_invoice">
+            <field name="name">To Invoice</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('invoice', '=', None)]</field>
+            <field name="act_window" ref="act_merited_commission"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_merited_commission_invoiced">
+            <field name="name">Invoiced</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('invoice', '!=', None)]</field>
+            <field name="act_window" ref="act_merited_commission"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_merited_commission_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="act_window" ref="act_merited_commission"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_party_commission">
+            <field name="name">Merited Commissions</field>
+            <field name="res_model">account.invoice.line</field>
+            <field name="domain">[('invoice_type', '=', 'in_invoice'), ('origin', 'like', 'account.move.line%'), ('party', 'in', Eval('active_ids'))]</field>
+            <field name="context">{'invoice_type': 'in_invoice', 'standalone': True}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_commission_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="account_invoice.invoice_line_view_tree"/>
+            <field name="act_window" ref="act_party_commission"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_commission_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="account_invoice.invoice_line_view_form"/>
+            <field name="act_window" ref="act_party_commission"/>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_open_commission_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">party.party,-1</field>
+            <field name="action" ref="act_party_commission"/>
+        </record>
         <!-- Menus -->
+        <menuitem action="act_merited_commission" id="menu_merited_commission"
+            parent="account_invoice.menu_invoices" sequence="50"/>
         <record model="ir.ui.menu-res.group"
             id="menu_configuration_group_sale_commission_admin">
             <field name="menu" ref="sale.menu_configuration"/>
